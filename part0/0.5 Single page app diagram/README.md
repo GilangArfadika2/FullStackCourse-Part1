@@ -7,31 +7,24 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate server
-    
+    server->>browser: HTML document
     deactivate server
 
-    Note right of browser: The browser start sending the content using POST method to the server
+    Note right of browser: when user open the url in browser, the browser sent GET request to server to fetch initial HTML and then the rest of required file
     
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    activate server
-    server-->>browser: HTML document
-    deactivate server
-
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->>browser: the css file
+    server-->>browser: return main.css file
     deactivate server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     activate server
-    server-->>browser: the JavaScript file
+    server-->>browser: return spa.js file
     deactivate server
-    
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    server-->>browser:  return json content [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
-
-    Note right of browser: The browser fetch updated data from server using GET Method
