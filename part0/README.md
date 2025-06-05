@@ -10,7 +10,7 @@ sequenceDiagram
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
     server-->>browser: HTML document
-    deactivate 
+    deactivate server
 
     Note right of browser: The browser start sending the content using POST method to the server
     
