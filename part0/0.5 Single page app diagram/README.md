@@ -7,12 +7,10 @@ sequenceDiagram
     participant browser
     participant server
 
-
-
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
-        activate browser
+    activate browser
     activate server
-    server->>browser: HTML document
+    server-->>browser: HTML document
     deactivate server
 
     Note right of browser: when user open the url in browser, the browser sent GET request to server to fetch initial HTML and then the rest of required file
