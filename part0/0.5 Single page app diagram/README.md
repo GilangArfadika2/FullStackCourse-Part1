@@ -7,9 +7,10 @@ sequenceDiagram
     participant browser
     participant server
 
-    activate browser
+
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+        activate browser
     activate server
     server->>browser: HTML document
     deactivate server
