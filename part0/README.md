@@ -15,7 +15,7 @@ sequenceDiagram
     Note right of browser: The browser start sending the content using POST method to the server
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    activate 
+    activate server
     server-->>browser: HTML document
     deactivate server
 
