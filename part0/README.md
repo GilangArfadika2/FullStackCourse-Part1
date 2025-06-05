@@ -2,7 +2,7 @@ In the section Loading a page containing JavaScript - review, the chain of event
 
 The diagram was made as a GitHub Markdown-file using the Mermaid-syntax, as follows:
 
-s```mermaid
+```mermaid
 sequenceDiagram
     participant browser
     participant server
