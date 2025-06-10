@@ -13,7 +13,7 @@ Each folder corresponds to the exercise number and title. Inside each, you'll fi
 
 Example folder layout:
 
-<pre><code> ``` 
+<pre><code> 
 part1/ 
 ├── 1.1 and 1.2/ 
 │ └── introdemo/ 
@@ -30,7 +30,7 @@ part1/
 ├── 1.8 unicafe step 3/ 
 │ └── introdemo/ 
 ├── 1.9 & 1.10 unicafe step 4 & 5/ 
-│ └── introdemo/ ``` </code></pre>
+│ └── introdemo/ </code></pre>
 
 ## ▶️ How to Run a Project
 
